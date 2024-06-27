@@ -59,13 +59,35 @@ function generateImage() {
             });
         } else {
             loadingSpinner.remove();
-            imageContainer.innerHTML = "Failed to generate image. Please try again.";
+            imageContainer.innerHTML = `
+    <span style="
+        color: #45474B; 
+        font-weight: bold; 
+        font-size: 60px; 
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); 
+        background: -webkit-linear-gradient(#45474B, #6B6E73); 
+        -webkit-background-clip: text; 
+        -webkit-text-fill-color: transparent;
+    ">
+        Failed to generate image. Please try again...
+    </span>`;
         }
     })
     .catch(error => {
         console.error("Error generating image:", error);
         loadingSpinner.remove();
-        imageContainer.innerHTML = "Failed to generate image. Please try again.";
+        imageContainer.innerHTML = `
+    <span style="
+        color: #45474B; 
+        font-weight: bold; 
+        font-size: 60px; 
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); 
+        background: -webkit-linear-gradient(#45474B, #6B6E73); 
+        -webkit-background-clip: text; 
+        -webkit-text-fill-color: transparent;
+    ">
+        Failed to generate image. Please try again...
+    </span>`;
     });
 }
 
